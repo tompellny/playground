@@ -1,0 +1,27 @@
+# Core
+streamlit
+pandas
+numpy
+st-gsheets-connection
+requests
+
+# Visualization
+seaborn
+plotly
+altair
+
+# Google API (for Gmail & Workspace access)
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
+
+# AI / Data Science
+openai
+lightgbm
+
+#Finance/Quant
+yfinance
+pandas-ta
+TA-Lib
+QuantLib
