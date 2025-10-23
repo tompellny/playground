@@ -1,0 +1,27 @@
+# === Python ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# === Virtual environment ===
+.venv/
+env/
+venv/
+
+# === Environment variables ===
+.env
+secrets.json
+
+# === Streamlit ===
+.streamlit/secrets.toml
+
+# === macOS cruft ===
+.DS_Store
+
+# === Jupyter / Notebooks ===
+.ipynb_checkpoints/
+
+# === VS Code ===
+.vscode/
