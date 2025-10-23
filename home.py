@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title("Playground for Streamlit")
+st.title("Streamlit Playground — MacBook VS Environment")
 
 option = st.selectbox(
     "Who helped you setting this up?",
