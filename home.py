@@ -5,7 +5,7 @@ st.title("Streamlit Playground — MacBook IDE")
 
 option = st.selectbox(
     "Who helped you setting this up?",
-    ("My Cat", "My Dog", "ChatGPT"),
+    ("My Cat", "My Dog", "ChatGPT", "Mum"),
 )
 
 st.write("You selected:", option)
