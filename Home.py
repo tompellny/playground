@@ -2,7 +2,7 @@ import streamlit as st
 
 pages = {
     "Main": [
-        st.Page("pages/Home.py", title="Home", icon=":material/home:"),
+        st.Page("pages/Intro.py", title="Intro", icon=":material/home:"),
         st.Page("pages/Text.py", title="Text", icon=":material/chat:"),
     ],
     "Details": [
