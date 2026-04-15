@@ -3,6 +3,7 @@ import tempfile
 import os
 import re
 import wave
+import time
 from datetime import datetime
 
 st.header("Transcript")
@@ -34,7 +35,9 @@ if uploaded_file is not None:
                     rate = wf.getframerate()
                     duration_secs = int(frames / rate)
 
+                start_time = time.time()
                 result = model.transcribe(tmp_path)
+                elapsed = time.time() - start_time
                 transcript = result["text"].strip()
             finally:
                 os.unlink(tmp_path)
@@ -54,5 +57,8 @@ if uploaded_file is not None:
         # Build output
         output = f"Date: {date_str}\nAudio Length: {duration_str}\n\nTranscript:\n{transcript}"
 
+        # Processing stats
+        speed = duration_secs / elapsed if elapsed > 0 else 0
         st.success("Transcription complete!")
+        st.caption(f"Processing time: {elapsed:.1f}s — Speed: {speed:.1f}x real-time ({elapsed / (duration_secs / 60):.1f}s per audio minute)")
         st.code(output, language=None, wrap_lines=True)
